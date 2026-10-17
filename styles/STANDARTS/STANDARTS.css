@@ -1,0 +1,41 @@
+:root{
+    --BACKGROUNDCOL: black;
+    --DEFGREEN: rgb(0, 253, 0);
+    --DEFBORDER: solid var(--DEFGREEN) 3px;
+
+}
+
+@font-face {
+    font-family: "ARCADE";
+    src: url(/styles/STANDARTS/FONTS/ARCADE.TTF);
+}
+
+@font-face {
+    font-family: "BLOCKSTEPPED";
+    src: url(/styles/STANDARTS/FONTS/BLOCKSTEPPED.TTF);
+}
+
+@font-face {
+    font-family: "PIXELOIDMONO";
+    src: url(/styles/STANDARTS/FONTS/PIXELOIDMONO.TTF);
+}
+
+*{
+    background-color: var(--BACKGROUNDCOL);
+}
+
+h1{
+    font-family: "PIXELOIDMONO";
+    font-size: 1rem;
+    color: var(--DEFGREEN);
+    font-weight: lighter;
+}
+
+
+h2{
+    font-family: "ARCADE";
+    font-size: 5rem;
+    color: var(--DEFGREEN);
+
+    font-weight: lighter;
+}

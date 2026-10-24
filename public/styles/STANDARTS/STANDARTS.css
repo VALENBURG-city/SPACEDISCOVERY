@@ -1,0 +1,97 @@
+:root{
+    --BACKGROUNDCOL: black;
+    --DEFCOLOR: rgb(0, 253, 0);
+    --DEFBORDER: solid var(--DEFCOLOR) 2px;
+
+}
+
+@font-face {
+    font-family: "ARCADE";
+    src: url(/public/styles/STANDARTS/FONTS/ARCADE.TTF);
+}
+
+@font-face {
+    font-family: "BLOCKSTEPPED";
+    src: url(/public/styles/STANDARTS/FONTS/BLOCKSTEPPED.TTF);
+}
+
+@font-face {
+    font-family: "PIXELOIDMONO";
+    src: url(/public/styles/STANDARTS/FONTS/PIXELOIDMONO.TTF);
+}
+
+*{
+    background-color: var(--BACKGROUNDCOL);
+    margin: 0;
+}
+
+.SPACEDISCOVERY{
+    font-family: "BLOCKSTEPPED";
+    font-size: 5rem;
+    color: var(--DEFCOLOR);
+    text-decoration: none;
+    font-weight: lighter;
+}
+
+p{
+    font-family: "PIXELOIDMONO";
+    font-size: 1rem;
+    color: var(--DEFCOLOR);
+    font-weight: lighter;
+}
+
+nav ul {
+    list-style: none;
+}
+
+nav ul li a {
+    text-decoration: none;
+    outline: none;
+}
+
+header{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    border-bottom: var(--DEFBORDER);
+    padding-bottom: 15px;
+}
+
+    ul{
+        display: flex;
+        justify-content:  space-around;
+        width: 100%;
+        text-decoration: none;
+        gap: 100px;
+    }
+
+    .BUTTONS{
+        display: flex;
+        justify-content: center;
+    }
+
+    .BUTTONHEAD{
+        color: var(--DEFCOLOR);
+        font-family: "PIXELOIDMONO";
+        border: var(--DEFBORDER);
+        border-color: black;
+        padding:  5px 10px  5px 10px;
+    }
+
+        .BUTTONHEAD:hover{
+            border-color: var(--DEFCOLOR);
+        }
+
+        .BUTTONHEAD.active{
+            border-color: var(--DEFCOLOR);
+        }
+
+
+section{
+    display: flex;
+    justify-content: center;
+    margin: 6vh 3vw 6vh 3vw;
+}
+
+

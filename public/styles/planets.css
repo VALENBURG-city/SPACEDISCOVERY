@@ -1,0 +1,68 @@
+.planetimage{
+    width: 250px;
+    height: 70%;
+}
+
+.buttVIEW{
+    display: flex;
+    gap: 20px;
+}
+
+.SWITCHbut{
+    border: var(--DEFBORDER);
+    color: var(--DEFCOLOR);
+    cursor: pointer;
+}
+
+    .R::before{
+        display: flex;
+        content: "-->";
+        font-family: "PIXELOIDMONO";
+        font-size: 1rem;
+        background: transparent;
+        transform: scaleY(80%);
+    }
+
+    .L::after{
+        display: flex;
+        content: "<--";
+        font-family: "PIXELOIDMONO";
+        font-size: 1rem;
+        background: transparent;
+        transform: scaleY(80%);
+    }
+
+    .SWITCHbut:hover{
+        background: var(--DEFCOLOR);
+        color:var(--BACK);
+    }
+
+.butTEXT{
+    display: flex;
+    color: var(--DEFCOLOR);
+    font-family: "PIXELOIDMONO";
+    transform: scaleY(50%);
+}
+
+
+.TEXTinfo{
+    font-family: "PIXELOIDMONO";
+    color: var(--DEFCOLOR);
+    font-size: 2rem;
+    font-weight: 100;
+}
+
+.photos{
+    border-right: var(--DEFBORDER) ;
+    justify-content:space-between;
+    align-items:center;
+    flex-direction: column;
+    gap: 20px;
+
+}
+
+
+.descr{
+    width: 100%;
+    height: 200px;
+}

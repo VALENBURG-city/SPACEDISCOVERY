@@ -1,8 +1,9 @@
 :root{
     --BACKGROUNDCOL: black;
-    --DEFCOLOR: rgb(0, 253, 0);
+    --DEFCOLOR: rgb(0, 255, 0);
     --DEFBORDER: solid var(--DEFCOLOR) 2px;
-
+    --FILTER: saturate(150%) hue-rotate(75deg) brightness(70%) contrast(150%);
+    --BACK: black;
 }
 
 @font-face {
@@ -23,6 +24,18 @@
 *{
     background-color: var(--BACKGROUNDCOL);
     margin: 0;
+    box-sizing: border-box;
+}
+
+::-webkit-scrollbar {
+    width: 15px;
+}
+::-webkit-scrollbar-track {
+    background: black;
+    border-left: 2px solid var(--DEFCOLOR);
+}
+::-webkit-scrollbar-thumb {
+    background: var(--DEFCOLOR);
 }
 
 .SPACEDISCOVERY{
@@ -33,11 +46,24 @@
     font-weight: lighter;
 }
 
-p{
+.BASEtext{
     font-family: "PIXELOIDMONO";
-    font-size: 1rem;
     color: var(--DEFCOLOR);
-    font-weight: lighter;
+    font-size: 1rem;
+    font-weight: 100;
+    transform: scaleY(80%);
+}
+
+.item{
+    padding-left: 20px;
+}
+
+.TEXTITLE{
+    font-family: "PIXELOIDMONO";
+    color: var(--DEFCOLOR);
+    font-size: 2rem;
+    font-weight: 100;
+    transform: scaleY(80%);
 }
 
 nav ul {
@@ -72,11 +98,13 @@ header{
     }
 
     .BUTTONHEAD{
+        display: flex;
         color: var(--DEFCOLOR);
         font-family: "PIXELOIDMONO";
         border: var(--DEFBORDER);
         border-color: black;
         padding:  5px 10px  5px 10px;
+        transform: scaleY(90%);
     }
 
         .BUTTONHEAD:hover{
@@ -87,11 +115,48 @@ header{
             border-color: var(--DEFCOLOR);
         }
 
-
-section{
-    display: flex;
-    justify-content: center;
-    margin: 6vh 3vw 6vh 3vw;
+.PHOTO{
+    filter:var(--FILTER);
+    image-rendering:pixelated;
 }
+
+main{
+    height: auto;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    /* padding: 6vh 3vw 6vh 3vw; */
+}
+
+.BASEROW{
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+    border-bottom: var(--DEFBORDER);
+}
+
+/* .LINE{
+    background-color: var(--DEFCOLOR);
+    height: 100%;
+    width: 2px;
+} */
+
+.BLOCKsection{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-start;
+    height: 400px;
+    width: 50%;
+    padding: 6vh 3vw 6vh 3vw;
+}
+
+
+
+
+
 
 

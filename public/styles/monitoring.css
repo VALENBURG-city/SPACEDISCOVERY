@@ -1,0 +1,103 @@
+/* --- ОСНОВНОЙ КОНТЕЙНЕР КОНСОЛИ --- */
+.console-panel {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    max-width: 1200px; /* Чтобы на больших экранах не растягивалось на весь экран */
+    margin: 0 auto;    /* Центрируем */
+    padding: 2vh 2vw;
+    gap: 20px;         /* Расстояние между блоками */
+}
+
+/* --- БЛОКИ С ДАННЫМИ --- */
+.data-block {
+    border: var(--DEFBORDER);
+    padding: 20px;
+    background-color: black; /* На всякий случай, чтобы перекрыть фон */
+}
+
+/* --- ЗАГОЛОВКИ --- */
+.TEXTinfo {
+    font-family: "PIXELOIDMONO";
+    color: var(--DEFCOLOR);
+    margin-bottom: 15px;
+    font-weight: 100;
+    border-bottom: 1px dashed var(--DEFCOLOR); /* Пунктирная линия под заголовком */
+    padding-bottom: 5px;
+}
+
+h1.TEXTinfo {
+    font-size: 2.5rem;
+    border-bottom: 2px solid var(--DEFCOLOR);
+    text-align: center;
+}
+
+h2.TEXTinfo {
+    font-size: 1.5rem;
+}
+
+/* --- СЕТКА ДЛЯ ДАННЫХ МКС --- */
+.data-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); /* Адаптивная сетка */
+    gap: 15px;
+}
+
+.data-grid p {
+    font-family: "PIXELOIDMONO";
+    color: var(--DEFCOLOR);
+    font-size: 1.1rem;
+    margin: 0;
+    padding: 10px;
+    border-left: 3px solid var(--DEFCOLOR); /* Акцентная полоса слева */
+    background: rgba(0, 255, 0, 0.05); /* Легкий зеленый отсвет */
+}
+
+/* --- БЛОК APOD (КАРТИНКА + ТЕКСТ) --- */
+#apod-data {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+#apod-data p {
+    font-family: "PIXELOIDMONO";
+    color: var(--DEFCOLOR);
+    line-height: 1.6;
+    font-size: 1rem;
+}
+
+/* Стили для картинки APOD */
+#apod-data img {
+    display: block;
+    max-width: 100%;       /* Не вылезает за пределы блока */
+    max-height: 500px;     /* Ограничиваем высоту, чтобы не было гигантских картинок */
+    width: auto;
+    border: var(--DEFBORDER);
+    margin: 10px 0;
+    object-fit: contain;   /* Сохраняет пропорции */
+    /* Добавим легкий эффект ЭЛТ-монитора */
+    filter: sepia(100%) hue-rotate(70deg) saturate(300%) contrast(150%);
+    /* Если картинка цветная, этот фильтр сделает её зеленоватой */
+}
+
+/* Описание под картинкой */
+#apod-data .apod-description {
+    font-size: 0.9rem;
+    opacity: 0.8;
+    border-top: 1px dashed var(--DEFCOLOR);
+    padding-top: 10px;
+}
+
+/* --- АНИМАЦИЯ МЕРЦАНИЯ (для консольного вайба) --- */
+@keyframes terminal-flicker {
+    0% { opacity: 0.95; }
+    5% { opacity: 0.85; }
+    10% { opacity: 1; }
+    15% { opacity: 0.9; }
+    100% { opacity: 1; }
+}
+
+.console-panel {
+    animation: terminal-flicker 5s infinite; /* Легкое мерцание всего блока */
+}

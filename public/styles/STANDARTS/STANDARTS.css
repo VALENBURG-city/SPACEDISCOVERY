@@ -1,5 +1,5 @@
 :root{
-    --BACKGROUNDCOL: black;
+    /* --BACKGROUNDCOL: black; */
     --DEFCOLOR: rgb(0, 255, 0);
     --DEFBORDER: solid var(--DEFCOLOR) 2px;
     --FILTER: saturate(150%) hue-rotate(75deg) brightness(70%) contrast(150%);
@@ -8,21 +8,21 @@
 
 @font-face {
     font-family: "ARCADE";
-    src: url(/public/styles/STANDARTS/FONTS/ARCADE.TTF);
+    src: url(FONTS/ARCADE.TTF);
 }
 
 @font-face {
     font-family: "BLOCKSTEPPED";
-    src: url(/public/styles/STANDARTS/FONTS/BLOCKSTEPPED.TTF);
+    src: url(FONTS/BLOCKSTEPPED.TTF);
 }
 
 @font-face {
     font-family: "PIXELOIDMONO";
-    src: url(/public/styles/STANDARTS/FONTS/PIXELOIDMONO.TTF);
+    src: url(FONTS/PIXELOIDMONO.TTF);
 }
 
 *{
-    background-color: var(--BACKGROUNDCOL);
+    background-color: black;
     margin: 0;
     box-sizing: border-box;
 }
@@ -64,6 +64,7 @@
     font-size: 2rem;
     font-weight: 100;
     transform: scaleY(80%);
+    background: transparent;
 }
 
 nav ul {
@@ -113,6 +114,8 @@ header{
 
         .BUTTONHEAD.active{
             border-color: var(--DEFCOLOR);
+            background-color: var(--DEFCOLOR);
+            color: black;
         }
 
 .PHOTO{

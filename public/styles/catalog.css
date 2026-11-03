@@ -1,0 +1,86 @@
+.GLOBALCATALOG{
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    flex-direction: column;
+    width: 600px;
+}
+
+.showBUTTON{
+    display: flex;
+    background: transparent;
+    font-family: "PIXELOIDMONO";
+    color: var(--DEFCOLOR);
+    font-size: 1.1rem;
+    font-weight: 100;
+    border: none;
+    cursor: pointer;
+    padding: 0 10px 0 0;
+    line-height: 1;
+    width: 20px;
+}
+
+.CATALOG{
+    display: flex;
+    align-items: center;
+    padding-left: 10px;
+    width: 600px;
+    border: var(--DEFBORDER);
+    background: transparent;
+}
+
+.CATALOG:hover{
+    background: var(--DEFCOLOR);
+    color: black;
+}
+
+.CATALOGTITLE{
+    display: flex;
+    font-size: 3rem;
+    background: transparent;
+}
+
+.CATALOGtext{
+    display: flex;
+    font-family: "PIXELOIDMONO";
+    color: var(--DEFCOLOR);
+    font-size: 1.3rem;
+    font-weight: 100;
+    transform: scaleY(80%);
+    text-decoration: none;
+    background: transparent;
+}
+
+.CATALOG:hover .TEXTITLE,
+.CATALOG:hover .CATALOGtext,
+.CATALOG:hover .showBUTTON {
+    color: black;
+}
+
+.firstLVL{
+    margin-left: 50px;
+    width: 550px;
+}
+
+.secondLVL{
+    margin-left: 100px;
+    width: 500px;
+}
+
+.thirdLVL{
+    width: 450px;
+    margin-left: 150px;
+}
+
+
+.tree-node > .children {
+    display: none;
+}
+
+.tree-node[data-open="true"] > .children {
+    display: block;
+}
+
+.tree-node > .CATALOG {
+    cursor: pointer;
+}

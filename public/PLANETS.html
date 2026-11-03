@@ -7,23 +7,23 @@
     <title>ПЛАНЕТЫ</title>
     <link rel="stylesheet" href="styles/STANDARTS/STANDARTS.css">
     <link rel="stylesheet" href="styles/planets.css">
+    <link rel="stylesheet" href="styles/catalog.css">
 </head>
 
 <body>
 
-
     <header>
 
-        <a href="/public/index.html" class="SPACEDISCOVERY">SPACEDISCOVERY</a>
+        <a href="index.html" class="SPACEDISCOVERY">SPACEDISCOVERY</a>
 
         <div class="BUTTONS">
             <nav>
                 <ul>
-                    <li><a href="/public/PLANETS.html" class="BUTTONHEAD active">ПЛАНЕТЫ</a></li>
-                    <li><a href="/public/SATELLITES.html" class="BUTTONHEAD">СПУТНИКИ</a></li>
-                    <li><a href="/public/MONITORING.html" class="BUTTONHEAD">КОНСОЛЬ МОНИТОРИНГА</a></li>
-                    <li><a href="/public/DOCUMENTATION.html" class="BUTTONHEAD">ДОКУМЕНТАЦИЯ</a></li>
-                    <li><a href="/public/PROFILE.html" class="BUTTONHEAD">ПРОФИЛЬ</a></li>
+                    <li><a href="PLANETS.html" class="BUTTONHEAD active">ПЛАНЕТЫ</a></li>
+                    <li><a href="SATELLITES.html" class="BUTTONHEAD">СПУТНИКИ</a></li>
+                    <li><a href="MONITORING.html" class="BUTTONHEAD">КОНСОЛЬ МОНИТОРИНГА</a></li>
+                    <li><a href="DOCUMENTATION.html" class="BUTTONHEAD">ДОКУМЕНТАЦИЯ</a></li>
+                    <li><a href="PROFILE.html" class="BUTTONHEAD">ПРОФИЛЬ</a></li>
                 </ul>
             </nav>
         </div>
@@ -33,75 +33,175 @@
     <main>
 
         <section class="BASEROW">
-            <div class="BLOCKsection photos">
 
-                <img class="planetimage PHOTO" src="/public/media/BOLVANKA.png">
-
-                <div class="buttVIEW">
-                    <button class="SWITCHbut L"></button>
-                    <button class="SWITCHbut R"></button>
+            <div class="GLOBALCATALOG">
+                <div class="CATALOG">
+                    <h1 class="TEXTITLE CATALOGTITLE">КАТАЛОГ</h1>
                 </div>
 
+                <div class="tree-node" data-open="false">
+                    <div class="CATALOG firstLVL">
+                        <button class="showBUTTON" type="button">+</button>
+                        <h1 class="TEXTITLE">СОЛНЕЧНАЯ СИСТЕМА</h1>
+                    </div>
 
-            </div>
-            <div class="BLOCKsection">
+                    <div class="children">
 
-                <h1 class="TEXTITLE">ИНФОРМАЦИЯ:</h1>
+                        <div class="tree-node leaf">
+                            <div class="CATALOG secondLVL">
+                                <a class="CATALOGtext" href="">Меркурий</a>
+                            </div>
+                        </div>
 
-                <p class="BASEtext item">NAME: Марс</p>
-                <p class="BASEtext item">TYPE: - </p>
-                <p class="BASEtext item">DISTANCE: - </p>
-                <p class="BASEtext item">MASS: 6,4171⋅1023 kg</p>
-                <p class="BASEtext item">RADIUS: 3396.2±0.1 km</p>
-                <p class="BASEtext item">MEAN DENSITY: 3.9335 g/sm3</p>
-                <p class="BASEtext item">FRST. COSMIC. VEL.: -</p>
-                <p class="BASEtext item">ROTATION SPEED: -</p>
-                <p class="BASEtext item">TEMPERATURE: -64 °C</p>
-                <p class="BASEtext item">AIR PRESSURE: -</p>
-                <p class="BASEtext item">ACCLRTN, OF FREE FALL: 3,711 м/s2</p>
-                <p class="BASEtext item">SATELLITES: 2</p>
+                        <div class="tree-node leaf">
+                            <div class="CATALOG secondLVL">
+                                <a class="CATALOGtext" href="">Венера</a>
+                            </div>
+                        </div>
 
+                        <!-- ЗЕМЛЯ -->
+                        <div class="tree-node" data-open="false">
+                            <div class="CATALOG secondLVL">
+                                <button class="showBUTTON" type="button">+</button>
+                                <a class="CATALOGtext" href="">Земля</a>
+                            </div>
+                            <div class="children">
+                                <div class="tree-node leaf">
+                                    <div class="CATALOG thirdLVL">
+                                        <a class="CATALOGtext" href="">Луна</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
 
-            </div>
-        </section>
+                        <!-- МАРС -->
+                        <div class="tree-node" data-open="false">
+                            <div class="CATALOG secondLVL">
+                                <button class="showBUTTON" type="button">+</button>
+                                <a class="CATALOGtext" href="MARS.html">Марс</a>
+                            </div>
+                            <div class="children">
+                                <div class="tree-node leaf">
+                                    <div class="CATALOG thirdLVL">
+                                        <a class="CATALOGtext" href="">Фобос</a>
+                                    </div>
+                                </div>
+                                <div class="tree-node leaf">
+                                    <div class="CATALOG thirdLVL">
+                                        <a class="CATALOGtext" href="">Деймос</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
 
-        <section class="BASEROW">
-            <div class="BLOCKsection"></div>
-            <div class="BLOCKsection">
-                <h1 class="TEXTITLE">COMPOSITION:</h1>
-                <p class="BASEtext item">95.97% carbon dioxide</p>
-                <p class="BASEtext item">1.93% argon</p>
-                <p class="BASEtext item">1.89% nitrogen</p>
-                <p class="BASEtext item">0.146% oxygen</p>
-                <p class="BASEtext item">0.0557% carbon monoxide</p>
-                <p class="BASEtext item">0.0210% water vapor</p>
-            </div>
-        </section>
+                        <!-- ЮПИТЕР -->
+                        <div class="tree-node" data-open="false">
+                            <div class="CATALOG secondLVL">
+                                <button class="showBUTTON" type="button">+</button>
+                                <a class="CATALOGtext" href="">Юпитер</a>
+                            </div>
+                            <div class="children">
+                                <div class="tree-node leaf">
+                                    <div class="CATALOG thirdLVL">
+                                        <a class="CATALOGtext" href="">Ио</a>
+                                    </div>
+                                </div>
+                                <div class="tree-node leaf">
+                                    <div class="CATALOG thirdLVL">
+                                        <a class="CATALOGtext" href="">Европа</a>
+                                    </div>
+                                </div>
+                                <div class="tree-node leaf">
+                                    <div class="CATALOG thirdLVL">
+                                        <a class="CATALOGtext" href="">Ганимед</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
 
+                        <!-- САТУРН -->
+                        <div class="tree-node" data-open="false">
+                            <div class="CATALOG secondLVL">
+                                <button class="showBUTTON" type="button">+</button>
+                                <a class="CATALOGtext" href="">Сатурн</a>
+                            </div>
+                            <div class="children">
+                                <div class="tree-node leaf">
+                                    <div class="CATALOG thirdLVL">
+                                        <a class="CATALOGtext" href="">Титан</a>
+                                    </div>
+                                </div>
+                                <div class="tree-node leaf">
+                                    <div class="CATALOG thirdLVL">
+                                        <a class="CATALOGtext" href="">Энцелад</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
 
-        <section class="BASEROW">
+                        <!-- УРАН -->
+                        <div class="tree-node" data-open="false">
+                            <div class="CATALOG secondLVL">
+                                <button class="showBUTTON" type="button">+</button>
+                                <a class="CATALOGtext" href="">Уран</a>
+                            </div>
+                            <div class="children">
+                                <div class="tree-node leaf">
+                                    <div class="CATALOG thirdLVL">
+                                        <a class="CATALOGtext" href="">Титания</a>
+                                    </div>
+                                </div>
+                                <div class="tree-node leaf">
+                                    <div class="CATALOG thirdLVL">
+                                        <a class="CATALOGtext" href="">Оберон</a>
+                                    </div>
+                                </div>
+                                <div class="tree-node leaf">
+                                    <div class="CATALOG thirdLVL">
+                                        <a class="CATALOGtext" href="">Ариэль</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
 
-            <div class="BLOCKsection descr">
+                        <!-- НЕПТУН -->
+                        <div class="tree-node" data-open="false">
+                            <div class="CATALOG secondLVL">
+                                <button class="showBUTTON" type="button">+</button>
+                                <a class="CATALOGtext" href="">Нептун</a>
+                            </div>
+                            <div class="children">
+                                <div class="tree-node leaf">
+                                    <div class="CATALOG thirdLVL">
+                                        <a class="CATALOGtext" href="">Тритон</a>
+                                    </div>
+                                </div>
+                                <div class="tree-node leaf">
+                                    <div class="CATALOG thirdLVL">
+                                        <a class="CATALOGtext" href="">Протей</a>
+                                    </div>
+                                </div>
+                                <div class="tree-node leaf">
+                                    <div class="CATALOG thirdLVL">
+                                        <a class="CATALOGtext" href="">Нереида</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
 
-                <h1 class="TEXTITLE">DESCRIPTION:</h1>
+                    </div>
+                </div>
 
-                <p class="BASEtext item">Марс — четвертая планета от Солнца и второй по размеру объект в солнечной
-                    системе.
-                    Из-за ржавчины (оксид железа) на его поверхности его называют «Красной планетой».
-                    Это холодная, каменистая пустыня с тонкой атмосферой и следами бурного,
-                    богатого водой прошлого.</p>
-
-            </div>
-
-        </section>
-
-        <section class="BASEROW">
-
-            <div class="BLOCKsection">
-
-                <h1 class="TEXTITLE">NOTES:</h1>
-
-                <p class="BASEtext item">Наблюдаю за красной планетой уже неделю. Пока без особых изменений...</p>
+                <!-- ГАЛАКТИКА АНДРОМЕДА -->
+                <div class="tree-node" data-open="false">
+                    <div class="CATALOG firstLVL">
+                        <button class="showBUTTON" type="button">+</button>
+                        <h1 class="TEXTITLE">ГАЛАКТИКА "АНДРОМЕДА"</h1>
+                    </div>
+                    <div class="children">
+                        <!-- содержимое галактики добавим позже -->
+                    </div>
+                </div>
 
             </div>
 
@@ -109,6 +209,7 @@
 
     </main>
 
+    <script src="scripts/catalog.js"></script>
 
 </body>
 

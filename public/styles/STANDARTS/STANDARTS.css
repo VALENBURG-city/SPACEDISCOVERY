@@ -1,6 +1,6 @@
 :root{
-    /* --BACKGROUNDCOL: black; */
-    --DEFCOLOR: rgb(0, 255, 0);
+    
+    --DEFCOLOR: #00ff00;
     --DEFBORDER: solid var(--DEFCOLOR) 2px;
     --FILTER: saturate(150%) hue-rotate(75deg) brightness(70%) contrast(150%);
     --BACK: black;
@@ -129,7 +129,7 @@ main{
     display: flex;
     flex-direction: column;
     justify-content: center;
-    /* padding: 6vh 3vw 6vh 3vw; */
+    
 }
 
 .BASEROW{

@@ -51,6 +51,10 @@
     background: transparent;
 }
 
+.CATALOGtext:hover{
+    text-decoration: underline;
+}
+
 .CATALOG:hover .TEXTITLE,
 .CATALOG:hover .CATALOGtext,
 .CATALOG:hover .showBUTTON {

@@ -29,15 +29,15 @@ document.addEventListener('DOMContentLoaded', () => {
         const node = catalogRow.closest('.tree-node');
         if (!node) return;
 
-        // лист без кнопки — вообще не мешаем, пусть ссылка работает
+
         const btn = catalogRow.querySelector('.showBUTTON');
         if (!btn) return;
 
-        // клик по ссылке — не перехватываем, пусть идёт переход
+
         const link = e.target.closest('a');
         if (link) return;
 
-        // всё остальное (кнопка + и пустая область строки) — переключаем
+
         e.preventDefault();
         toggle(node);
     }

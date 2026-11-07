@@ -1,5 +1,4 @@
 :root{
-    
     --DEFCOLOR: #00ff00;
     --DEFBORDER: solid var(--DEFCOLOR) 2px;
     --FILTER: saturate(150%) hue-rotate(75deg) brightness(70%) contrast(150%);

@@ -1,10 +1,11 @@
 require('dotenv').config();
 const express = require('express');
-const path = require('path');
 const session = require('express-session');
+const path = require('path');
 const db = require('./models');
-
 const apiRoutes = require('./routes/api');
+const authRoutes = require('./routes/auth');
+
 
 const app = express();
 const PORT = 3000;
@@ -18,16 +19,18 @@ app.use(session({
     saveUninitialized: false
 }));
 
-
 app.use(express.static(path.join(__dirname, 'public')));
 
-
+app.get('/planet/:name', (req, res) => {
+    res.sendFile(path.join(__dirname, 'public', 'planet.html'));
+});
 
 app.get('/', (req, res) => {
     res.sendFile(path.join(__dirname, 'public', 'index.html'));
 });
 
 
+app.use('/api/auth', authRoutes);
 app.use('/api', apiRoutes);
 
 
@@ -47,3 +50,4 @@ async function startServer() {
 }
 
 startServer();
+

@@ -5,30 +5,75 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>ПРОФИЛЬ</title>
-    <link rel="stylesheet" href="styles/STANDARTS/STANDARTS.css">
-    <link rel="stylesheet" href="styles/profile.css">
+    <link rel="stylesheet" href="/styles/STANDARTS/STANDARTS.css">
+    <link rel="stylesheet" href="/styles/profile.css">
 </head>
 
 <body>
 
     <header>
 
-        <a href="index.html" class="SPACEDISCOVERY">SPACEDISCOVERY</a>
+        <a href="/index.html" class="SPACEDISCOVERY">SPACEDISCOVERY</a>
 
         <div class="BUTTONS">
             <nav>
                 <ul>
-                    <li><a href="PLANETS.html" class="BUTTONHEAD">ПЛАНЕТЫ</a></li>
-                    <li><a href="SATELLITES.html" class="BUTTONHEAD">СПУТНИКИ</a></li>
-                    <li><a href="MONITORING.html" class="BUTTONHEAD">КОНСОЛЬ МОНИТОРИНГА</a></li>
-                    <li><a href="DOCUMENTATION.html" class="BUTTONHEAD">ДОКУМЕНТАЦИЯ</a></li>
-                    <li><a href="PROFILE.html" class="BUTTONHEAD active">ПРОФИЛЬ</a></li>
+                    <li><a href="/PLANETS.html" class="BUTTONHEAD">ПЛАНЕТЫ</a></li>
+
+                    <li><a href="/MONITORING.html" class="BUTTONHEAD">КОНСОЛЬ МОНИТОРИНГА</a></li>
+                    <li><a href="/DOCUMENTATION.html" class="BUTTONHEAD">ДОКУМЕНТАЦИЯ</a></li>
+                    <li><a href="/PROFILE.html" class="BUTTONHEAD active">ПРОФИЛЬ</a></li>
                 </ul>
             </nav>
         </div>
 
     </header>
 
+    <main>
+        <div class="CONSOLE-AUTH">
+
+
+            <div id="auth-forms">
+                <h1 class="TEXTITLE">ТЕРМИНАЛ ДОСТУПА</h1>
+                <div class="LINE"></div>
+
+
+                <div id="login-form" class="form-block">
+                    <h2 class="BASEtext">ВХОД В СИСТЕМУ</h2>
+                    <input type="email" id="login-email" class="INPUT-FIELD" placeholder="EMAIL">
+                    <input type="password" id="login-password" class="INPUT-FIELD" placeholder="ПАРОЛЬ">
+                    <button id="btn-login" class="BUTTONHEAD">ВОЙТИ</button>
+                    <p class="switch-text">НЕТ АККАУНТА? <span id="show-register">ЗАРЕГИСТРИРОВАТЬСЯ</span></p>
+                </div>
+
+
+                <div id="register-form" class="form-block" style="display: none;">
+                    <h2 class="BASEtext">РЕГИСТРАЦИЯ ОПЕРАТОРА</h2>
+                    <input type="text" id="reg-name" class="INPUT-FIELD" placeholder="ПОЗЫВНОЙ (ИМЯ)">
+                    <input type="email" id="reg-email" class="INPUT-FIELD" placeholder="EMAIL">
+                    <input type="password" id="reg-password" class="INPUT-FIELD" placeholder="ПАРОЛЬ">
+                    <button id="btn-register" class="BUTTONHEAD">СОЗДАТЬ ПРОФИЛЬ</button>
+                    <p class="switch-text">УЖЕ ЕСТЬ АККАУНТ? <span id="show-login">ВОЙТИ</span></p>
+                </div>
+            </div>
+
+
+            <div id="profile-info" style="display: none;">
+                <h1 class="TEXTITLE">ПРОФИЛЬ ОПЕРАТОРА</h1>
+                <div class="LINE"></div>
+
+                <div class="info-block">
+                    <p class="BASEtext item">СТАТУС: <span style="color: #00ff00;">АКТИВЕН</span></p>
+                    <p class="BASEtext item">ПОЗЫВНОЙ: <span id="profile-name" style="color: #00ff00;"></span></p>
+                </div>
+
+                <button id="btn-logout" class="BUTTONHEAD" style="margin-top: 20px;">ЗАВЕРШИТЬ СЕАНС</button>
+            </div>
+        </div>
+    </main>
+
 </body>
+
+<script src="scripts/profile.js"></script>
 
 </html>

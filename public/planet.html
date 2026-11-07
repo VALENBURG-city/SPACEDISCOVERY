@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ИНФОРМАЦИЯ О ПЛАНЕТЕ</title>
+    <link rel="stylesheet" href="/styles/STANDARTS/STANDARTS.css">
+    <link rel="stylesheet" href="/styles/currentPLANET.css">
+</head>
+
+<body>
+
+    <header>
+
+        <a href="/index.html" class="SPACEDISCOVERY">SPACEDISCOVERY</a>
+
+        <div class="BUTTONS">
+            <nav>
+                <ul>
+                    <li><a href="/PLANETS.html" class="BUTTONHEAD active">ПЛАНЕТЫ</a></li>
+
+                    <li><a href="/MONITORING.html" class="BUTTONHEAD">КОНСОЛЬ МОНИТОРИНГА</a></li>
+                    <li><a href="/DOCUMENTATION.html" class="BUTTONHEAD">ДОКУМЕНТАЦИЯ</a></li>
+                    <li><a href="/PROFILE.html" class="BUTTONHEAD">ПРОФИЛЬ</a></li>
+                </ul>
+            </nav>
+        </div>
+
+    </header>
+
+    <main>
+
+        <section class="BASEROW">
+            <div class="BLOCKsection photos">
+
+                <div class="SLIDER-container">
+                    <img class="planetimage PHOTO" id="obj-image" src="" alt="Planet">
+                    <div class="buttVIEW">
+                        <button class="SWITCHbut L" id="btn-prev"></button>
+                        <button class="SWITCHbut R" id="btn-next"></button>
+                    </div>
+                </div>
+
+
+            </div>
+            <div class="BLOCKsection">
+                <h1 class="TEXTITLE">ИНФОРМАЦИЯ:</h1>
+
+                <p class="BASEtext item">NAME: <span id="obj-name">...</span></p>
+                <p class="BASEtext item">TYPE: <span id="obj-type">...</span></p>
+                <p class="BASEtext item">DISTANCE: <span id="obj-distance">...</span></p>
+                <p class="BASEtext item">MASS: <span id="obj-mass">...</span></p>
+                <p class="BASEtext item">RADIUS: <span id="obj-radius">...</span></p>
+                <p class="BASEtext item">MEAN DENSITY: <span id="obj-density">...</span></p>
+                <p class="BASEtext item">FRST. COSMIC. VEL.: <span id="obj-velocity">...</span></p>
+                <p class="BASEtext item">ROTATION SPEED: <span id="obj-rotation">...</span></p>
+                <p class="BASEtext item">TEMPERATURE: <span id="obj-temp">...</span></p>
+                <p class="BASEtext item">AIR PRESSURE: <span id="obj-pressure">...</span></p>
+                <p class="BASEtext item">ACCLRTN, OF FREE FALL: <span id="obj-gravity">...</span></p>
+                <p class="BASEtext item">SATELLITES: <span id="obj-moons">...</span></p>
+            </div>
+        </section>
+
+        <section class="BASEROW">
+            <div class="BLOCKsection"></div>
+            <div class="BLOCKsection">
+                <h1 class="TEXTITLE">COMPOSITION:</h1>
+
+                <div id="obj-composition">
+                    <p>ЗАГРУЗКА...</p>
+                </div>
+            </div>
+        </section>
+
+
+        <section class="BASEROW">
+
+            <div class="BLOCKsection descr">
+
+                <h1 class="TEXTITLE">DESCRIPTION:</h1>
+
+                <p class="BASEtext item">Марс — четвертая планета от Солнца и второй по размеру объект в солнечной
+                    системе.
+                    Из-за ржавчины (оксид железа) на его поверхности его называют «Красной планетой».
+                    Это холодная, каменистая пустыня с тонкой атмосферой и следами бурного,
+                    богатого водой прошлого.</p>
+
+            </div>
+
+        </section>
+
+        <section class="BASEROW">
+            <div class="BLOCKsection">
+                <h1 class="TEXTITLE">NOTES:</h1>
+
+                <div id="notes-list">
+                    <p class="BASEtext item">Загрузка...</p>
+                </div>
+
+                <div id="add-note-form" style="display: none; margin-top: 20px;">
+                    <textarea id="note-input" class="BASEtext" placeholder="Напишите заметку..."
+                        style="width: 100%; height: 60px; background: transparent; border: var(--DEFBORDER); color: var(--DEFCOLOR); font-family: 'PIXELOIDMONO'; padding: 5px;"></textarea>
+                    <button id="save-note-btn" class="BUTTONHEAD"
+                        style="margin-top: 10px; cursor: pointer;">СОХРАНИТЬ</button>
+                </div>
+
+                <p id="login-prompt" class="BASEtext item" style="color:var(--DEFCOLOR); display: none;">
+                    [ ДЛЯ ДОБАВЛЕНИЯ ЗАМЕТОК АВТОРИЗУЙТЕСЬ В ПРОФИЛЕ ]
+                </p>
+            </div>
+        </section>
+
+    </main>
+
+    <script src="/scripts/planet.js"></script>
+
+</body>
+
+</html>

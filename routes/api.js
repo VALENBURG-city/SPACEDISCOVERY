@@ -2,10 +2,9 @@ require('dotenv').config();
 const express = require('express');
 const router = express.Router();
 const axios = require('axios');
+const db = require('../models');
 
 
-
-module.exports = router;
 
 router.get('/apod', async (req, res) => {
     try {
@@ -56,5 +55,64 @@ router.get('/iss', async (req, res) => {
 });
 
 
+router.get('/objects/:name', async (req, res) => {
+    try {
+        const object = await db.Object.findOne({
+            where: { name: req.params.name }
+        });
+
+        if (!object) {
+            return res.status(404).json({ status: 'error', message: 'Объект не найден' });
+        }
+
+        res.json({ status: 'ok', data: object });
+    } catch (error) {
+        console.error('Ошибка при получении объекта:', error);
+        res.status(500).json({ status: 'error', message: 'Ошибка сервера' });
+    }
+});
+
+
+
+
+router.get('/notes/:objectName', async (req, res) => {
+    try {
+        if (!req.session.userId) return res.status(401).json({ status: 'error', message: 'Войдите в систему' });
+
+        const obj = await db.Object.findOne({ where: { name: req.params.objectName } });
+        if (!obj) return res.status(404).json({ status: 'error', message: 'Объект не найден' });
+
+        const notes = await db.Note.findAll({
+            where: { operator_id: req.session.userId, object_id: obj.object_id },
+            order: [['created_at', 'DESC']]
+        });
+        res.json({ status: 'ok', data: notes });
+    } catch (error) {
+        res.status(500).json({ status: 'error', message: 'Ошибка сервера' });
+    }
+});
+
+
+router.post('/notes', async (req, res) => {
+    try {
+        if (!req.session.userId) return res.status(401).json({ status: 'error', message: 'Войдите в систему' });
+
+        const { objectName, content } = req.body;
+        const obj = await db.Object.findOne({ where: { name: objectName } });
+        if (!obj) return res.status(404).json({ status: 'error', message: 'Объект не найден' });
+
+        const note = await db.Note.create({
+            operator_id: req.session.userId,
+            object_id: obj.object_id,
+            title: `Заметка`,
+            content: content
+        });
+
+        res.json({ status: 'ok', data: note });
+    } catch (error) {
+        console.error(error);
+        res.status(500).json({ status: 'error', message: 'Ошибка сервера' });
+    }
+});
 
 module.exports = router;

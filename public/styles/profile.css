@@ -1,0 +1,61 @@
+.CONSOLE-AUTH {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    min-height: 60vh;
+    width: 100%;
+    padding: 40px;
+}
+
+.form-block {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    width: 100%;
+    max-width: 400px;
+    margin-top: 20px;
+}
+
+.INPUT-FIELD {
+    background: transparent;
+    border: var(--DEFBORDER);
+    color: var(--DEFCOLOR);
+    padding: 10px;
+    font-family: 'PIXELOIDMONO';
+    font-size: 1rem;
+    outline: none;
+}
+
+.INPUT-FIELD:focus {
+    background-color: var(--DEFCOLOR);
+    color: black;
+}
+
+.switch-text {
+    text-align: center;
+    font-size: 0.8rem;
+    cursor: pointer;
+}
+
+.switch-text span {
+    color: #00ff00;
+    text-decoration: underline;
+}
+
+#login-form{
+    color: var(--DEFCOLOR);
+    font-family: "PIXELOIDMONO";
+}
+
+#show-register{
+    font-family: "PIXELOIDMONO";
+}
+
+.info-block {
+    margin-top: 20px;
+    border: 1px dashed var(--DEFCOLOR);
+    padding: 20px;
+    width: 100%;
+    max-width: 400px;
+}

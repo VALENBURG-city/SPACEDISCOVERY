@@ -5,24 +5,24 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>МАРС</title>
-    <link rel="stylesheet" href="styles/STANDARTS/STANDARTS.css">
-    <link rel="stylesheet" href="styles/currentPLANET.css">
+    <link rel="stylesheet" href="/styles/STANDARTS/STANDARTS.css">
+    <link rel="stylesheet" href="/styles/currentPLANET.css">
 </head>
 
 <body>
 
     <header>
 
-        <a href="index.html" class="SPACEDISCOVERY">SPACEDISCOVERY</a>
+        <a href="/index.html" class="SPACEDISCOVERY">SPACEDISCOVERY</a>
 
         <div class="BUTTONS">
             <nav>
                 <ul>
-                    <li><a href="PLANETS.html" class="BUTTONHEAD active">ПЛАНЕТЫ</a></li>
-                    <li><a href="SATELLITES.html" class="BUTTONHEAD">СПУТНИКИ</a></li>
-                    <li><a href="MONITORING.html" class="BUTTONHEAD">КОНСОЛЬ МОНИТОРИНГА</a></li>
-                    <li><a href="DOCUMENTATION.html" class="BUTTONHEAD">ДОКУМЕНТАЦИЯ</a></li>
-                    <li><a href="PROFILE.html" class="BUTTONHEAD">ПРОФИЛЬ</a></li>
+                    <li><a href="/PLANETS.html" class="BUTTONHEAD active">ПЛАНЕТЫ</a></li>
+
+                    <li><a href="/MONITORING.html" class="BUTTONHEAD">КОНСОЛЬ МОНИТОРИНГА</a></li>
+                    <li><a href="/DOCUMENTATION.html" class="BUTTONHEAD">ДОКУМЕНТАЦИЯ</a></li>
+                    <li><a href="/PROFILE.html" class="BUTTONHEAD">ПРОФИЛЬ</a></li>
                 </ul>
             </nav>
         </div>
@@ -34,8 +34,7 @@
         <section class="BASEROW">
             <div class="BLOCKsection photos">
 
-                <img class="planetimage PHOTO" src="media/BOLVANKA.png">
-
+                <img class="planetimage PHOTO" id="obj-image" src="media/MARSpic.png" alt="Planet">
                 <div class="buttVIEW">
                     <button class="SWITCHbut L"></button>
                     <button class="SWITCHbut R"></button>
@@ -44,23 +43,20 @@
 
             </div>
             <div class="BLOCKsection">
-
                 <h1 class="TEXTITLE">ИНФОРМАЦИЯ:</h1>
 
-                <p class="BASEtext item">NAME: Марс</p>
-                <p class="BASEtext item">TYPE: - </p>
-                <p class="BASEtext item">DISTANCE: - </p>
-                <p class="BASEtext item">MASS: 6,4171⋅1023 kg</p>
-                <p class="BASEtext item">RADIUS: 3396.2±0.1 km</p>
-                <p class="BASEtext item">MEAN DENSITY: 3.9335 g/sm3</p>
-                <p class="BASEtext item">FRST. COSMIC. VEL.: -</p>
-                <p class="BASEtext item">ROTATION SPEED: -</p>
-                <p class="BASEtext item">TEMPERATURE: -64 °C</p>
-                <p class="BASEtext item">AIR PRESSURE: -</p>
-                <p class="BASEtext item">ACCLRTN, OF FREE FALL: 3,711 м/s2</p>
-                <p class="BASEtext item">SATELLITES: 2</p>
-
-
+                <p class="BASEtext item">NAME: <span id="obj-name">...</span></p>
+                <p class="BASEtext item">TYPE: <span id="obj-type">...</span></p>
+                <p class="BASEtext item">DISTANCE: <span id="obj-distance">...</span></p>
+                <p class="BASEtext item">MASS: <span id="obj-mass">...</span></p>
+                <p class="BASEtext item">RADIUS: <span id="obj-radius">...</span></p>
+                <p class="BASEtext item">MEAN DENSITY: <span id="obj-density">...</span></p>
+                <p class="BASEtext item">FRST. COSMIC. VEL.: <span id="obj-velocity">...</span></p>
+                <p class="BASEtext item">ROTATION SPEED: <span id="obj-rotation">...</span></p>
+                <p class="BASEtext item">TEMPERATURE: <span id="obj-temp">...</span></p>
+                <p class="BASEtext item">AIR PRESSURE: <span id="obj-pressure">...</span></p>
+                <p class="BASEtext item">ACCLRTN, OF FREE FALL: <span id="obj-gravity">...</span></p>
+                <p class="BASEtext item">SATELLITES: <span id="obj-moons">...</span></p>
             </div>
         </section>
 
@@ -107,6 +103,8 @@
         </section>
 
     </main>
+
+    <script src="scripts/planet.js"></script>
 
 </body>
 

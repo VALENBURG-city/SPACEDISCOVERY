@@ -6,7 +6,7 @@ async function seed() {
 
 
         await db.Object.destroy({ where: {} });
-        console.log('🗑 База очищена.');
+        console.log(' База очищена.');
 
 
         const objects = [
@@ -200,10 +200,10 @@ async function seed() {
             await db.Object.create(obj);
         }
 
-        console.log(`✅ База данных заполнена ${objects.length} объектами!`);
+        console.log(` База данных заполнена ${objects.length} объектами!`);
         process.exit(0);
     } catch (error) {
-        console.error('❌ Ошибка:', error);
+        console.error(' Ошибка:', error);
         process.exit(1);
     }
 }

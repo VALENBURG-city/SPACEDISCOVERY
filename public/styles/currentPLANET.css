@@ -78,24 +78,11 @@
     height: 100%;
 }
 
-.PHOTO{
-
+.PHOTO {
+    animation: glitchIn 1s steps(5, end) forwards;
 }
 
-.PHOTO::before{
-    position: relative;
-    width: 400px;
-    background: black;
-    height: 100%;
-    top: 0;
-    left: 0;
-    transition: 0.7s all ease ;
-    z-index: 1;
-
+@keyframes glitchIn {
+    0% { opacity: 0;  }
+    100% { opacity: 1;  }
 }
-
-    @keyframes RENDER {
-        
-
-
-    }

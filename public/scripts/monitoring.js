@@ -54,7 +54,7 @@ async function fetchIssData(loadingInterval) {
     } catch (error) {
 
         if (loadingInterval) clearInterval(loadingInterval);
-        document.getElementById('iss-data').innerHTML = '<p style="color: #00ff00;">[ СИГНАЛ ПОТЕРЯН ]</p>';
+        document.getElementById('iss-data').innerHTML = '<p style="color: var(--DEFCOLOR);">[ СИГНАЛ ПОТЕРЯН ]</p>';
         console.error('Ошибка при загрузке МКС:', error);
     }
 }
@@ -82,7 +82,7 @@ async function fetchApodData(loadingInterval) {
                 
                 ${d.media_type === 'image'
                     ? `<img src="${d.image_url}" alt="${d.alt}" style="max-width: 100%; border: 2px solid var(--DEFCOLOR); margin: 15px 0;">`
-                    : `<p style="color: #00ff00;">[ МЕДИА-ФАЙЛ: ${d.media_type} ] <a href="${d.image_url}" target="_blank" style="color: var(--DEFCOLOR);">ССЫЛКА</a></p>`
+                    : `<p style="color: var(--DEFCOLOR);">[ МЕДИА-ФАЙЛ: ${d.media_type} ] <a href="${d.image_url}" target="_blank" style="color: var(--DEFCOLOR);">ССЫЛКА</a></p>`
                 }
                 
                 <p class="apod-description">${cleanExplanation}</p>
@@ -92,7 +92,7 @@ async function fetchApodData(loadingInterval) {
         }
     } catch (error) {
         if (loadingInterval) clearInterval(loadingInterval);
-        document.getElementById('apod-data').innerHTML = '<p style="color: #00ff00;">[ ОШИБКА ЗАГРУЗКИ APOD ]</p>';
+        document.getElementById('apod-data').innerHTML = '<p style="color: var(--DEFCOLOR);">[ ОШИБКА ЗАГРУЗКИ APOD ]</p>';
         console.error('Ошибка при загрузке APOD:', error);
     }
 }
